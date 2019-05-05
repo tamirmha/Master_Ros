@@ -255,7 +255,7 @@ asdasd
     <joint name="${prefix}ee_fixed_joint" type="fixed">
       <parent link="${prefix}link6" />
       <child link = "${prefix}ee_link" />
-      <origin xyz="0.0 ${link6_length} 0.0" rpy="0.0 0.0 ${pi/2.0}" />
+      <origin xyz="0.0  0.0 ${link6_length}" rpy="0.0 0.0 0" />
     </joint>
 
 <!-- ee link -->
@@ -264,8 +264,14 @@ asdasd
         <geometry>
           <box size="0.01 0.01 0.01"/>
         </geometry>
-        <origin rpy="0 0 0" xyz="-0.01 0 0"/>
+        <origin rpy="0 0 0" xyz="0 0 0.005"/>
       </collision>
+      <visual>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0.0 0 0.005"/>
+      </visual>
     </link>
 
     <xacro:arm_transmission prefix="${prefix}" />
