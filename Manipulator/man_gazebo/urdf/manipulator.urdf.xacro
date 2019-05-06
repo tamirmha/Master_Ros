@@ -9,7 +9,8 @@
 
   <xacro:arm_robot prefix=""/>
 
-  <link name="world" />
+  
+<link name="world" />
 
   <joint name="world_joint" type="fixed">
     <parent link="world" />
