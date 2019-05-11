@@ -1,9 +1,12 @@
 <launch>
-  <include file="$(find man_moveit)/launch/planning_context.launch"/>
+  <arg name="dof" default="" />
+  <include file="$(find man_moveit)/launch/planning_context.launch">
+	<arg name="dof" value="$(arg dof)" />
+  </include>
 
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
-  <arg unless="$(arg debug)" name="launch_prefix" value="" />#
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
   <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
 
   <!-- Verbose Mode Option -->
@@ -28,6 +31,7 @@
     <arg name="moveit_manage_controllers" value="true" />
     <arg name="moveit_controller_manager" value="man" unless="$(arg fake_execution)"/>
     <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
+    <arg name="dof" value="$(arg dof)" />
   </include>
 
   <!-- Start the actual move_group node/action server -->
