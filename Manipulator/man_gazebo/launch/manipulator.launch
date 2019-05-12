@@ -3,14 +3,16 @@
   <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
   <arg name="gui" default="true" doc="Starts gazebo gui" />
   <arg name="world_name" default="worlds/empty.world"/>
-  
+  <arg name="man" default="roll_z_0_1roll_y_0_4pris_z_0_7pris_y_0_1pitch_x_0_1pitch_x_0_1" />
+  <arg name="dof" default="6dof" />
+
   <!-- startup simulated world -->   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="$(find man_gazebo)/worlds/pepper.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gui" value="$(arg gui)"/>
   </include>
- <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find man_gazebo)/urdf/manipulator.urdf.xacro'" />
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find man_gazebo)/urdf/$(arg dof)/$(arg man).urdf.xacro'" />
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot " respawn="false" output="screen" />
