@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 
-<robot name="ur5">
+<robot name="arm">
     <group name="manipulator">
         <chain base_link="base_link" tip_link="ee_link" />
     </group>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-  <xacro:include filename="$(find man_gazebo)/urdf/transmission.xacro" />
+  <xacro:include filename="$(find man_gazebo)/urdf/6dof/transmission_6dof.xacro" />
   <xacro:include filename="$(find man_gazebo)/urdf/gazebo.xacro" />
 
   <xacro:macro name="cylinder_inertial" params="radius length mass *origin">

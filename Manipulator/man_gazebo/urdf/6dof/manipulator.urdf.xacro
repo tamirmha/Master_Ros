@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro"
-       name="ur5" >
+       name="arm" >
 
   <!-- common stuff -->
   <xacro:include filename="$(find man_gazebo)/urdf/common.gazebo.xacro" />
