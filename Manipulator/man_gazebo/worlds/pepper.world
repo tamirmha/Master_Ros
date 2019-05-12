@@ -108,7 +108,7 @@
           <geometry>
             <cylinder>
               <radius>0.1</radius>
-              <length>2</length>
+              <length>0.75</length>
             </cylinder>
           </geometry>
           <material>
@@ -135,7 +135,7 @@
           <geometry>
             <cylinder>
               <radius>0.1</radius>
-              <length>2</length>
+              <length>0.75</length>
             </cylinder>
           </geometry>
           <surface>
@@ -205,10 +205,10 @@
         </link>
       </model>
       <model name='pepper_plant'>
-        <pose frame=''>0.508689 0.637189 0.5 0 -0 2.3e-05</pose>
+        <pose frame=''>0.5 0.0 0.5 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0.508689 0.637189 1 0 -0 2.3e-05</pose>
+          <pose frame=''>0.5 0 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -29.4 0 -0 0</wrench>

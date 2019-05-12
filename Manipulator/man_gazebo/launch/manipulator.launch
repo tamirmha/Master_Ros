@@ -3,7 +3,7 @@
   <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
   <arg name="gui" default="true" doc="Starts gazebo gui" />
   <arg name="world_name" default="worlds/empty.world"/>
-  <arg name="man" default="roll_z_0_1roll_y_0_4pris_z_0_7pris_y_0_1pitch_x_0_1pitch_x_0_1" />
+  <arg name="man" default="full_manipulator" />
   <arg name="dof" default="6dof" />
 
   <!-- startup simulated world -->   
