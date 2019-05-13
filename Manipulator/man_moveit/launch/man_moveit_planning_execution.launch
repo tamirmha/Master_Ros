@@ -1,5 +1,5 @@
 <launch>
-	<arg name="dof" default="" />
+	<arg name="dof" default="6dof" />
 	<arg name="sim" default="true" />
 	<arg name="debug" default="false" />
 
