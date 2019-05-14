@@ -4,10 +4,10 @@
  	<arg name="dof" default="6dof" />
  	<!--<param name="robot_description" command="$(find xacro)/xacro - -inorder '$(find man_gazebo)/urdf/6dof/$(arg man).urdf.xacro'" /> -->
 
-    <node name="delete_gazebo_model" pkg="rosservice" type="rosservice" args="call /gazebo/delete_model &quot; model_name: 'robot' &quot; "  respawn="false" output="screen"/>
+    <node name="delete_gazebo_model" pkg="rosservice" type="rosservice" args="call /gazebo/delete_model &quot; model_name: 'robot' &quot; "  respawn="false" output="log"/>
 
      <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find man_gazebo)/urdf/$(arg dof)/$(arg man).urdf.xacro'" />
     <!-- push robot_description to factory and spawn robot in gazebo -->
-    <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot " respawn="false" output="screen" />
+    <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot " respawn="false" output="log" />
 
 </launch>
