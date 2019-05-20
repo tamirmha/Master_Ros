@@ -6,7 +6,7 @@
 	<arg name="gazebo_gui" default="true" doc="Starts gazebo gui" />
 	<arg name="world_name" default="worlds/empty.world"/>
 	<arg name="rviz" default="true" doc="Starts rviz gui" />
-	<arg name="man" default="full_manipulator" />
+	<arg name="man" default="manipulator" />
 	<!-- launch gazebo -->
 	<include if="$(arg gazebo)" file="$(find man_gazebo)/launch/manipulator.launch">
 		<arg name="world_name" value="$(arg world_name)"/>
