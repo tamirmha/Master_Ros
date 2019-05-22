@@ -20,7 +20,11 @@
   <include file="$(find man_gazebo)/launch/controller_utils.launch"/>
   <rosparam file="$(find man_gazebo)/controller/arm_controller_$(arg dof).yaml" command="load"/>
   <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" />
+<<<<<<< HEAD
+  <node pkg="rosservice" type="rosservice" name="set_logger_level" args="call --wait /gazebo/set_logger_level &quot; {logger: 'ros',level: 'Fatal'}&quot;" respawn="false" />
+=======
 	
   <node pkg="rosservice" type="rosservice" name="set_logger_level" args="call --wait /gazebo/set_logger_level &quot; {logger: 'ros', level: 'Fatal'} &quot;" respawn="false" />
 
+>>>>>>> cb08f5915f1d41e06b0bf02338b2162ebc71530d
 </launch>
