@@ -88,27 +88,27 @@
     <model name='pepper_plant'>
       <link name='link'>
         <inertial>
-          <mass>3</mass>
+          <mass>300</mass>
           <inertia>
             <ixx>1.0075</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
             <iyy>1.0075</iyy>
             <iyz>0</iyz>
-            <izz>0.015</izz>
+            <izz>1.015</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
-        <pose frame=''>-0 -0 0.5 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 0 0</pose>
         <gravity>1</gravity>
         <visual name='visual'>
           <geometry>
             <cylinder>
               <radius>0.1</radius>
-              <length>0.75</length>
+              <length>6.75</length>
             </cylinder>
           </geometry>
           <material>
@@ -135,7 +135,7 @@
           <geometry>
             <cylinder>
               <radius>0.1</radius>
-              <length>0.75</length>
+              <length>6.75</length>
             </cylinder>
           </geometry>
           <surface>
@@ -190,28 +190,28 @@
       <pose frame=''>0.508688 0.637189 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>145 490000000</sim_time>
-      <real_time>146 11576762</real_time>
-      <wall_time>1556960824 468350188</wall_time>
-      <iterations>145490</iterations>
+      <sim_time>0 0</sim_time>
+      <real_time>0 0</real_time>
+      <wall_time>0 0</wall_time>
+      <iterations>0</iterations>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
           <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
+          <velocity>0 0 0 0 0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='pepper_plant'>
-        <pose frame=''>0.5 0.0 0.5 0 -0 0</pose>
+        <pose frame=''>0.5 0.0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>0.5 0 1 0 -0 0</pose>
+          <pose frame=''>0.5 0 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -29.4 0 -0 0</wrench>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
