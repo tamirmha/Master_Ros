@@ -106,11 +106,11 @@
       <collision>
 		 <origin xyz="0 0 ${link1_length/2}" rpy="0 0 0" /> 
         <geometry>
-			<cylinder radius="${link1_radius}" length="${link1_length}"/>
+			<cylinder radius="${link1_radius}" length="${link1_length}"  mass="${link1_mass}"/>
         </geometry>
       </collision>
-      <xacro:cylinder_inertial radius="${link1_length}" length="${link1_length}" mass="${link1_mass}">
-        <origin xyz="0.0 0.0 ${base_length/2}" rpy="0 0 0" />
+      <xacro:cylinder_inertial radius="${link1_radius}" length="${link1_length}" mass="${link1_mass}">
+        <origin xyz="0.0 0.0 ${link1_length/2}" rpy="0 0 0" />
       </xacro:cylinder_inertial>
     </link>
 <!--  joint 2	-->

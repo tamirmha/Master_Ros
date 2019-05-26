@@ -11,6 +11,7 @@
     <arg name="world_name" default="$(find man_gazebo)/worlds/pepper.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gui" value="$(arg gui)"/>
+
   </include>
  <param name="robot_description" command="$(find xacro)/xacro '$(find man_gazebo)/urdf/$(arg dof)/$(arg man).urdf.xacro'" />
 
