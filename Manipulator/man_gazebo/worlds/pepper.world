@@ -1,4 +1,25 @@
 <sdf version='1.6'>
+<<<<<<< HEAD
+  <world name='default'>   
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>5 5</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>2</max_contacts>
+        </collision>     
+=======
   <world name='default'>
 
     <model name='ground_plane'>
@@ -6,15 +27,42 @@
       <link name='link'>
         
        
+>>>>>>> f0769350329abfbedc2e8ab2eb7f39b825a29a25
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
       </link>
     </model>
+<<<<<<< HEAD
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field> 
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics> 
+    <state world_name='default'>
+      <sim_time>0 0</sim_time>
+      <real_time>0 0</real_time>
+      <wall_time>0 0</wall_time>
+      <iterations>0</iterations>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>    
+    </state>
+=======
     <physics name='default_physics' default='0' type='ode'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>-1</real_time_update_rate>
     </physics>
   
+>>>>>>> f0769350329abfbedc2e8ab2eb7f39b825a29a25
   </world>
 </sdf>
