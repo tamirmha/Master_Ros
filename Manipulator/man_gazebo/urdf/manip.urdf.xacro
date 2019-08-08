@@ -42,7 +42,7 @@
 	<xacro:property name="joint5_axe" value="0 1 0" /> 
 	<xacro:property name="joint6_axe" value="0 0 1" /> 
 
-    <xacro:property name="base_length" value="6.25" /> 
+    <xacro:property name="base_length" value="3.25" /> 
 	<xacro:property name="link1_length" value="0.15" /> 
 	<xacro:property name="link2_length" value="0.5" /> 
 	<xacro:property name="link3_length" value="0.4" /> 
