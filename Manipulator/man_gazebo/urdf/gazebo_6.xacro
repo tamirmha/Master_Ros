@@ -21,10 +21,7 @@
 </material>   
 
   <xacro:macro name="arm_gazebo" params="prefix">
-    <gazebo reference="${prefix}link0">
-      <selfCollide>true</selfCollide>
-	  <material>Gazebo/Red</material>
-    </gazebo>
+
     <gazebo reference="${prefix}link1">
       <selfCollide>true</selfCollide>
 	  <material>Gazebo/Orange</material>

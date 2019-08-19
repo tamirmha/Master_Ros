@@ -5,7 +5,7 @@
   <!-- common stuff -->
   <xacro:include filename="$(find man_gazebo)/urdf/common.gazebo.xacro" />
 
-  <xacro:include filename="$(find man_gazebo)/urdf/manip.urdf.xacro" />
+  <xacro:include filename="$(find man_gazebo)/urdf/manip6.urdf.xacro" />
 
   <xacro:arm_robot prefix=""/>
 
@@ -15,7 +15,7 @@
   <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link = "base_link" />
-    <origin xyz="0 -0.5 0" rpy="0.0 0.0 0.0" />
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
   </joint>
 
 </robot>
