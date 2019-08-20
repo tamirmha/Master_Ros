@@ -2,15 +2,6 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
   <xacro:macro name="arm_transmission" params="prefix">
-    <transmission name="${prefix}joint0_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}joint0">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}joint0_motor">
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
 
     <transmission name="${prefix}joint1_trans">
       <type>transmission_interface/SimpleTransmission</type>
@@ -42,15 +33,6 @@
       </actuator>
     </transmission>
 
-    <transmission name="${prefix}joint4_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}joint4">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}joint4_motor">
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
 
   </xacro:macro>
 
