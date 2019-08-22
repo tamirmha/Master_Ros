@@ -8,3 +8,4 @@ controller_list:
       - joint2
       - joint3
       - joint4
+      - ee_joint
