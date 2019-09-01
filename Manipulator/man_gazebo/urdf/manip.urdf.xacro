@@ -99,7 +99,7 @@
       <child link = "${prefix}link0" />
       <origin xyz="0.0 0 ${base_length + link0_radius+0.01}" rpy="${-pi/2} 0.0 0" />
       <axis xyz="${joint0_axe}" />
-	  <xacro:joint_limit joint_type="${joint0_type}" link_length="${link0_length}"/>
+	  <xacro:joint_limit joint_type="${joint0_type}" link_length="${link0_length*6}"/>
       <dynamics damping="0.0" friction="0.0"/>
     </joint>
 
@@ -289,14 +289,11 @@
       </xacro:cylinder_inertial>
     </link>
 
-    <joint name="${prefix}ee_joint" type="revolute">
+    <joint name="${prefix}ee_fixed_joint" type="fixed">
       <parent link="${prefix}link6" />
       <child link = "${prefix}ee_link" />
       <origin xyz="0.0  0.0 ${link6_length}" rpy="0.0 0.0 0" />
-      <axis xyz="0 0 1"/>
-      <xacro:joint_limit joint_type="revolute" link_length="0.1"/>
-      <dynamics damping="0.0" friction="0.0"/>
-
+   
     </joint>
 
 <!-- ee link -->
@@ -307,10 +304,7 @@
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0.005"/>
       </collision>
-      <xacro:cylinder_inertial radius="0.01" length="0.01" mass="0.01">
-        <origin xyz="0.0 0.0 0.005" rpy="0 0 0" />
-      </xacro:cylinder_inertial>
-    </link>
+	</link>
 
     <xacro:arm_transmission prefix="${prefix}" />
     <xacro:arm_gazebo prefix="${prefix}" />
