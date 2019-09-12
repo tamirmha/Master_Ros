@@ -46,7 +46,7 @@
 
 	
 	<xacro:property name="link0_length" value="0.25" />
-    <xacro:property name="base_length"  value="3.25" /> 
+    <xacro:property name="base_length"  value="0.25" /> 
 	<xacro:property name="link1_length" value="0.25" /> 
 	<xacro:property name="link2_length" value="0.5" /> 
 	<xacro:property name="link3_length" value="0.4" /> 
