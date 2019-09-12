@@ -1,14 +1,12 @@
 <?xml version="1.0"?>
 <launch>
+	<arg name="man" default="manipulator" />
 	<arg name="dof" default="6dof" />
 	<arg name="gazebo" default="true" doc="Starts gazebo" />
 	<arg name="gazebo_pause" default="false" doc="Starts gazebo in paused mode" />
 	<arg name="gazebo_gui" default="true" doc="Starts gazebo gui" />
 	<arg name="world_name" default="worlds/empty.world"/>
 	<arg name="rviz" default="true" doc="Starts rviz gui" />
-	<arg name="man" default="manipulator" />
-
-
 
 	<!-- launch gazebo -->
 	<include if="$(arg gazebo)" file="$(find man_gazebo)/launch/manipulator.launch">
@@ -25,9 +23,6 @@
 	</include>
 	<!-- show in rviz- just for visulize or to move the manipulator manually -->
 	<include if="$(arg rviz)" file="$(find man_moveit)/launch/moveit_rviz.launch"/>
-	<!--   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
-    	<param name="use_gui" value="true"/>
- 	 </node> -->
 
 
 </launch>

@@ -85,7 +85,7 @@
       <child link = "${prefix}link0" />
       <origin xyz="0.0 ${base_radius} ${base_length + link0_radius}" rpy="${-pi/2} 0.0 0" />
       <axis xyz="${joint0_axe}" />
-	  <xacro:joint_limit joint_type="${joint0_type}" link_length="0"/>
+	  <xacro:joint_limit joint_type="${joint0_type}" link_length="${link0_length*6}"/>
       <dynamics damping="0.0" friction="0.0"/>
     </joint>
 
@@ -172,12 +172,12 @@
     </link>
 <xacro:property name="joint3_type" value="revolute"/>
 <xacro:property name="joint3_axe" value="0 1 0"/>
-<xacro:property name="link3_length" value="0.4"/>
+<xacro:property name="link3_length" value="0.1"/>
 <!--  joint 3	-->
     <joint name="${prefix}joint3" type="${joint3_type}">
       <parent link="${prefix}link2"/>
       <child link="${prefix}link3" />
-      <origin xyz="0 ${link2_radius+link3_radius} ${link2_length}" rpy="0 ${pi/2} 0 "/>
+      <origin xyz="0 0 ${link2_length+link3_radius}" rpy="${pi/2} 0  0 "/>
       <axis xyz="${joint3_axe}"/>
 	  <xacro:joint_limit joint_type="${joint3_type}" link_length="${link3_length}"/>
       <dynamics damping="0.0" friction="0.0"/>

@@ -14,7 +14,7 @@
 	<disable_collisions link1="link3" link2="link4" reason="Adjacent" /> 
 	<disable_collisions link1="link4" link2="link5" reason="Adjacent" />
 	<disable_collisions link1="link5" link2="camera_link" reason="Adjacent" />
-	<disable_collisions link1="ee_link" link2="link4" reason="Never" /> 
+	<disable_collisions link1="ee_link" link2="camera_link" reason="Adjacent" /> 
 
 	<disable_collisions link1="ee_link" link2="link4" reason="Never" />
 	<disable_collisions link1="ee_link" link2="link5" reason="Never" />
