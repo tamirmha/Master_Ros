@@ -264,14 +264,35 @@
       </xacro:cylinder_inertial>
     </link>
 
-     <joint name="${prefix}ee_joint" type="revolute">
+          <!-- fake joint - the rotation about z axe of the camera is not important -->
+        <joint name="fake_joint" type="revolute">
       <parent link="${prefix}link5" />
-      <child link = "${prefix}ee_link" />
+      <child link = "camera_link" />
       <origin xyz="0.0  0.0 ${link5_length}" rpy="0.0 0.0 0" />
       <axis xyz="0 0 1"/>
       <xacro:joint_limit joint_type="revolute" link_length="0.1"/>
       <dynamics damping="0.0" friction="0.0"/>
+        </joint>
 
+    <!-- camera link -->
+        <link name="camera_link">
+          <collision>
+            <geometry>
+              <box size="0.01 0.01 0.01"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.005"/>
+          </collision>
+          <xacro:cylinder_inertial radius="0.01" length="0.01" mass="0.01">
+            <origin xyz="0.0 0.0 0.005" rpy="0 0 0" />
+          </xacro:cylinder_inertial>
+        </link>
+
+
+    <joint name="${prefix}ee_fixed_joint" type="fixed">
+      <parent link="${prefix}camera_link" />
+      <child link = "${prefix}ee_link" />
+      <origin xyz="0.0  0.0 0.01" rpy="0.0 0.0 0" />
+   
     </joint>
 
 <!-- ee link -->
@@ -282,10 +303,8 @@
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0.005"/>
       </collision>
-      <xacro:cylinder_inertial radius="0.01" length="0.01" mass="0.01">
-        <origin xyz="0.0 0.0 0.005" rpy="0 0 0" />
-      </xacro:cylinder_inertial>
-    </link>
+	</link>
+
 
     <xacro:arm_transmission prefix="${prefix}" />
     <xacro:arm_gazebo prefix="${prefix}" />
