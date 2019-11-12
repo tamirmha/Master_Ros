@@ -37,7 +37,7 @@
 
 
   <xacro:macro name="arm_robot" params="prefix ">
-        <xacro:property name="base_length" value="0.25"/>
+        <xacro:property name="base_length" value="3.25"/>
             <!-- Inertia parameters -->
         <xacro:property name="base_mass" value="1.0" />
         <xacro:property name="link0_mass" value="40.7" />
