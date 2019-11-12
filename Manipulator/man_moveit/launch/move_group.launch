@@ -62,5 +62,5 @@
     <param name="planning_scene_monitor/publish_state_updates" value="$(arg publish_monitored_planning_scene)" />
     <param name="planning_scene_monitor/publish_transforms_updates" value="$(arg publish_monitored_planning_scene)" />
   </node>
-
+	<node pkg="rosservice" type="rosservice" name="set_logger_level_move_group" args="call --wait /move_group/set_logger_level &quot; {logger: 'ros', level: 'Error'} &quot;" respawn="false" />
 </launch>
